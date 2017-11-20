@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="profile"
+        android:title="Perfil"
+        android:summary="Editar el perfil del usuario.">
+        <intent
+            android:targetPackage="co.edu.javeriana.bikewars"
+            android:targetClass="co.edu.javeriana.bikewars.ProfileView"
+            android:action="co.edu.javeriana.bikewars.ProfileView"/>
+    </Preference>
+
+    <Preference
+        android:key="social"
+        android:title="Redes Sociales"
+        android:summary="Gestionar la sincronizacion con las redes sociales.">
+        <intent
+            android:targetPackage="co.edu.javeriana.bikewars"
+            android:targetClass="co.edu.javeriana.bikewars.SocialView"
+            android:action="co.edu.javeriana.bikewars.SocialView"/>
+    </Preference>
+
+    <EditTextPreference
+        android:key="logoTime"
+        android:title="Tiempo de logo"
+        android:summary="Cuanto tiempo toma la pantalla de inicio en dar paso al ingreso."
+        android:enabled="true"
+        android:persistent="true"
+        android:defaultValue="2000"
+        />
+    <!-- Aqui es donde se ponen las diferentes opciones de configuracion que se van a guardar localmente en  el dispositivo.-->
+</PreferenceScreen>

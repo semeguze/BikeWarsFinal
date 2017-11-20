@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BackColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.edu.javeriana.bikewars.RouteLobbyView">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <fragment
+                android:id="@+id/mainMap"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/sha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/lobbyRacebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    app:backgroundTint="@android:color/white"
+                    android:clickable="true"
+                    android:onClick="racesLaunch"
+                    app:fab_showShadow="false"
+                    app:fab_size="normal"
+                    app:srcCompat="@drawable/ic_flag_black_24dp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/lobbySocialbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    app:backgroundTint="@android:color/white"
+                    android:clickable="true"
+                    android:onClick="friendsLaunch"
+                    app:fab_showShadow="false"
+                    app:fab_size="normal"
+                    app:srcCompat="@drawable/ic_facebook" />
+            </LinearLayout>
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/lobbyMenuRoutes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="false"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:menu_animationDelayPerItem="50"
+                app:menu_backgroundColor="@android:color/transparent"
+                app:menu_buttonSpacing="0dp"
+                app:menu_colorNormal="#DA4336"
+                app:menu_colorPressed="#E75043"
+                app:menu_colorRipple="#99FFFFFF"
+                app:menu_fab_label="Rutas"
+                app:menu_fab_size="normal"
+                app:menu_icon="@drawable/ic_arrow"
+                app:menu_labels_colorNormal="#333333"
+                app:menu_labels_colorPressed="#444444"
+                app:menu_labels_colorRipple="#66FFFFFF"
+                app:menu_labels_cornerRadius="3dp"
+                app:menu_labels_ellipsize="none"
+                app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+                app:menu_labels_margin="0dp"
+                app:menu_labels_maxLines="-1"
+                app:menu_labels_padding="4dp"
+                app:menu_labels_paddingBottom="4dp"
+                app:menu_labels_paddingLeft="4dp"
+                app:menu_labels_paddingRight="4dp"
+                app:menu_labels_paddingTop="4dp"
+                app:menu_labels_position="left"
+                app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+                app:menu_labels_showShadow="false"
+                app:menu_labels_singleLine="false"
+                app:menu_labels_textColor="#FFFFFF"
+                app:menu_labels_textSize="14sp"
+                app:menu_openDirection="up"
+                app:menu_shadowColor="#66000000"
+                app:menu_shadowRadius="4dp"
+                app:menu_shadowXOffset="1dp"
+                app:menu_shadowYOffset="3dp"
+                app:menu_showShadow="false">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/lobbyFabSearchRoute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="searchRouteLaunch"
+                    android:src="@drawable/ic_search_black_24dp"
+                    app:fab_label="Buscar ruta"
+                    app:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/lobbyFabNewRoute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="newRouteLaunch"
+                    android:src="@drawable/ic_add_circle"
+                    app:fab_label="Nueva ruta"
+                    app:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/lobbyFabHistoric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="historicLaunch"
+                    android:src="@drawable/ic_time"
+                    app:fab_label="Historial"
+                    app:fab_size="mini" />
+            </com.github.clans.fab.FloatingActionMenu>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:onClick="test"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/lobbyEndBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="8dp"
+                app:backgroundTint="#DA4336"
+                android:clickable="true"
+                android:visibility="invisible"
+                app:fab_size="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.982"
+                app:srcCompat="@drawable/cancel" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

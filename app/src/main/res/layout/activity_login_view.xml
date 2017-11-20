@@ -1,0 +1,448 @@
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BackColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="co.edu.javeriana.bikewars.LoginView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_header_selector"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="56dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/logotrans" />
+
+
+            <EditText
+                android:id="@+id/loginUserTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:ems="10"
+                android:gravity="left|center"
+                android:hint="Nombre de usuario"
+                android:inputType="textPersonName"
+                android:textColor="@color/white" />
+
+
+            <EditText
+                android:id="@+id/loginPassTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:ems="10"
+                android:gravity="left|center"
+                android:hint="Contraseña"
+                android:inputType="textPersonName"
+                android:password="true"
+                android:textColor="@color/white" />
+
+
+            <Button
+                android:id="@+id/loginLoginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="login"
+                android:text="Ingresar" />
+
+
+            <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                android:id="@+id/loginButtonTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+            <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                android:id="@+id/loginButtonTwitter2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+
+            <TextView
+                android:id="@+id/link_signup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="No account yet? Create one"
+                android:textSize="16dip" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/loginLogoImg">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/loginUserTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:ems="10"
+                android:gravity="left|center"
+                android:hint="Nombre de usuario"
+                android:inputType="textPersonName" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/loginPassTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:ems="10"
+                android:gravity="left|center"
+                android:hint="Contraseña"
+                android:inputType="textPersonName"
+                android:password="true" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/loginLoginBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="login"
+                android:text="Ingresar" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/loginNewUserBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="newUserLaunch"
+                android:text="Crear cuenta" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+    <ImageView
+        android:id="@+id/loginLogoImg"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:fancy="http://schemas.android.com/apk/res-auto"
+tools:context="co.edu.javeriana.bikewars.LoginView">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/imageView"
+    android:background="@drawable/fondocielo"
+    android:scaleType="matrix" />
+
+<RelativeLayout
+    android:id="@+id/transparentOverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000">
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="89dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal">
+
+            <pl.droidsonroids.gif.GifTextView
+                android:id="@+id/imageView14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/racegif" />
+
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/logotrans" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="360dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:id="@+id/linearLayout"
+    android:layout_below="@+id/linearLayout2"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true">
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/loginUserTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User"
+        app:met_baseColor="@android:color/white"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="?colorAccent"
+        app:met_underlineColor="#fff"
+        app:met_singleLineEllipsis="true"
+        app:met_iconLeft="@drawable/ic_person_white_48dp"
+        app:met_iconPadding="0dp"
+        android:layout_marginTop="20dp" />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/loginPassTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        app:met_baseColor="@android:color/white"
+        app:met_floatingLabel="normal"
+        app:met_primaryColor="?colorAccent"
+        app:met_underlineColor="#fff"
+        app:met_iconLeft="@drawable/ic_lock_white_48dp"
+        app:met_iconPadding="0dp"
+        android:inputType="textPersonName"
+        android:password="true"
+        app:met_singleLineEllipsis="true"/>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btn_signup"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        fancy:fb_borderColor="#FFFFFF"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#FFFFFF"
+        fancy:fb_focusColor="#bfd8e7"
+        fancy:fb_radius="0dp"
+        fancy:fb_text="Login"
+        fancy:fb_textColor="#fff"
+
+        fancy:fb_ghost="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Ingresar"
+            android:id="@+id/loginLoginBtn"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"
+            android:onClick="login"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="O ingresa con..."
+            android:id="@+id/textView2"
+            android:textColor="#fff"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!--
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/loginFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
+        -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/loginBtnTwitter"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="Twitter"
+                android:layout_gravity="center"
+                android:background="@drawable/twitter"
+                android:textColor="#ffffff"
+                />
+
+            <ImageButton
+                android:id="@+id/loginBtnFb"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:text="Twitter"
+                android:layout_gravity="center"
+                android:background="@drawable/facebook"
+                android:textColor="#ffffff"
+                />
+
+        </LinearLayout>
+
+
+
+        <!--
+        <Button
+            android:id="@+id/loginBtnTwitter"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Twitter"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"
+            />
+
+
+        <com.twitter.sdk.android.core.identity.TwitterLoginButton
+            android:id="@+id/loginButtonTwitter"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Sign In"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"
+            />
+        -->
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="false"
+    android:layout_alignParentLeft="false"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentBottom="true"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Nuevo por acá? Registrate!"
+            android:id="@+id/textView"
+            android:textColor="#fff"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:onClick="newUserLaunch"
+            android:layout_gravity="center_horizontal" />
+
+        <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textView2"
+            android:textColor="#fff"
+            android:phoneNumber="true" />
+            -->
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>
+

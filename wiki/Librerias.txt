@@ -1,0 +1,6 @@
+TedPermission:
+    https://github.com/ParkSangGwon/TedPermission
+Smart Location Library:
+    https://github.com/mrmans0n/smart-location-lib
+Google-Directions-Android:
+    https://github.com/jd-alexander/Google-Directions-Android
